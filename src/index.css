@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: fira;
+  src: url(./assets/Fonts/Fira_Code/static/FiraCode-Medium.ttf);
+}
+@font-face {
+  font-family: inter;
+  src: url(./assets/Fonts/Inter/static/Inter_28pt-Regular.ttf);
+}
+@font-face {
+  font-family: monsterrat;
+  src: url(./assets/Fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: monsterratBold;
+  src: url(./assets/Fonts/Montserrat-ExtraBold.ttf);
+}
+
+
+@theme {
+  /* custom fonts */
+
+  --font-primary1: inter, "monospace";
+  --font-secondary: fira, "sans-serif";
+  --font-primary: monsterrat, "sans-serif";
+  --font-primaryBold: monsterratBold, "sans-serif";
+
+  /* custom colors */
+  --color-primary: #213448;
+  --color-primary-hover: #facc15	;
+  --color-primaryText: #0065f8;
+
+
+
+  --inset-md: 'inset-md': 'inset 10px 20px 20px rgba(0,0,0,0.1)';
+
+  --no-scrollbar: '-webkit-scrollbar'
+}
+
+*{
+  font-family: var(--font-primary);
+}
+
+
+.hero{
+  background-attachment: fixed;
+}
