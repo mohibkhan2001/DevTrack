@@ -45,14 +45,14 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="hero h-screen w-full bg-cover bg-center relative"
+      className="hero h-screen w-full bg-cover bg-center relative zoom-animate"
       style={{ backgroundImage: `url(${dtHero})` }}
     >
       <div className="absolute inset-0 bg-black/50 pointer-events-none" />
 
       <div className="relative flex items-center justify-center h-full text-white text-center">
         <div className="flex flex-col items-center justify-evenly h-2/3">
-          <h1 className="text-5xl font-primaryBold font-extrabold text-white relative flex flex-col items-center mb-12">
+          <h1 className="text-5xl font-primaryBold  text-white relative flex flex-col items-center mb-12">
             <span className="relative z-10 ">
               Welcome to your <br /> Learning Journey !
             </span>
@@ -77,7 +77,7 @@ const Hero = () => {
           </h1>
 
 
-          <p className="text-xl max-w-2xl">
+          <p className="text-xl max-w-3xl font-primaryLight">
             DevTrack is designed to help self-taught developers like you stay
             organized and motivated. Track your progress, manage your goals, and
             celebrate your achievements all in one place. Let’s build something
