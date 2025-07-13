@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`w-full fixed top-0 left-0 z-50 transition-colors duration-500 ${
+      className={` font-primary w-full fixed top-0 left-0 z-50 transition-colors duration-500 ${
         scrolled ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
@@ -28,7 +28,7 @@ const Navbar = () => {
         </h1>
 
         {/* Center: Nav Links */}
-        <ul className="hidden md:flex items-center space-x-8 text-white text-md font-thin absolute left-1/2 transform -translate-x-1/2">
+        <ul className="hidden md:flex items-center space-x-8 text-white text-md font-primaryELight absolute left-1/2 transform -translate-x-1/2">
           <li><a href="#home" className="hover:text-gray-300 cursor-pointer">Home</a></li>
           <li><a href="#features" className="hover:text-gray-300">Features</a></li>
           <li><a href="#about" className="hover:text-gray-300">About</a></li>
