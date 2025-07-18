@@ -84,7 +84,7 @@ const Hero = () => {
             amazing together!
           </p>
 
-          <NavButtons showStart={true} showLearn={true} />
+          <NavButtons showStart={true} showLearn={true} startClassName="border-white text-white hover:bg-white hover:text-black" learnClassName="hover:text-gray-300 hover:border-gray-300"/>
         </div>
       </div>
     </section>

@@ -1,12 +1,45 @@
-# React + Vite
+# 🚀 DevTrack — Learning Tracker for Self-Taught Developers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DevTrack is a responsive, modern learning dashboard built for self-taught developers to set, track, and manage their learning goals in a visually intuitive way.
 
-Currently, two official plugins are available:
+![DevTrack Preview](./src/assets/Images/dt_chart2.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔍 Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+DevTrack helps independent learners structure their learning journey by allowing them to:
+
+- 🎯 Set personalized goals
+- 📊 Track progress visually
+- 📌 Stay focused with built-in productivity tools
+- 🌙 Toggle dark/light mode
+- 📆 Monitor daily efforts and achievements
+
+---
+
+## 🛠️ Tech Stack
+
+| Category     | Tech Used                             |
+|--------------|----------------------------------------|
+| Frontend     | React, Tailwind CSS                   |
+| Animations   | AOS (Animate on Scroll), GlideJS      |
+| Icons        | React Icons, Flaticon                 |
+| Fonts        | Inter (via Google Fonts)              |
+| Build Tool   | Vite                                   |
+
+---
+
+## ✨ Features
+
+- **Customizable Goal Cards**: Define your learning objectives and milestones.
+- **Carousel Sections**: Interactive sliders powered by Glide.js.
+- **Motivational UI**: Engaging design with animations and transitions.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop.
+- **Dynamic Sections**: Data-driven feature components.
+- **Sidebar Navigation**: Smooth hamburger menu for small screens.
+
+---
+
+## 📁 Folder Structure
+
