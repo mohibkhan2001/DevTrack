@@ -5,6 +5,7 @@ import NavButtons from './navButtons';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [userName, setUserName] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +15,14 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('userData');
+    if (storedUser) {
+      const parsed = JSON.parse(storedUser);
+      setUserName(parsed.name);
+    }
   }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -26,13 +35,13 @@ const Navbar = () => {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
-        {/* Left: Logo */}
+        {/* Logo */}
         <h1 className="font-bold text-3xl z-50">
           <span className={`${scrolled ? 'text-white' : 'text-primary'}`}>Dev</span>
           <span className="text-gray-200">Track</span>
         </h1>
 
-        {/* Center: Nav Links (Desktop) */}
+        {/* Center Nav Links */}
         <ul className="hidden md:flex items-center space-x-8 text-white text-md font-primaryELight absolute left-1/2 transform -translate-x-1/2">
           <li><a href="#home" className="hover:text-gray-300 cursor-pointer">Home</a></li>
           <li><a href="#features" className="hover:text-gray-300">Features</a></li>
@@ -40,9 +49,18 @@ const Navbar = () => {
           <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
         </ul>
 
-        {/* Right: Buttons */}
-        <div className="hidden md:block">
-          <NavButtons showStart={true} showLearn={false} startClassName="border-white text-white hover:bg-white hover:text-black" />
+        {/* Right Buttons with User Name */}
+        <div className="hidden md:flex items-center gap-4">
+          {userName && (
+            <span className="text-white font-primaryELight">
+              Hi, <span className="font-semibold">{userName}</span>
+            </span>
+          )}
+          <NavButtons
+            showStart={true}
+            showLearn={false}
+            startClassName="border-white text-white hover:bg-white hover:text-black"
+          />
         </div>
 
         {/* Mobile Menu Icon */}
@@ -52,7 +70,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Sidebar Menu */}
+        {/* Mobile Sidebar */}
         <div
           className={`md:hidden fixed top-0 right-0 h-full w-64 bg-black shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -63,6 +81,11 @@ const Navbar = () => {
             <a href="#features" onClick={closeMenu} className="hover:text-gray-300">Features</a>
             <a href="#about" onClick={closeMenu} className="hover:text-gray-300">About</a>
             <a href="#contact" onClick={closeMenu} className="hover:text-gray-300">Contact</a>
+            {userName && (
+              <div className="text-white text-md">
+                Hi, <span className="font-semibold">{userName}</span>
+              </div>
+            )}
             <div className="pt-6">
               <NavButtons
                 showStart={true}
