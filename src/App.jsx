@@ -1,19 +1,29 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './assets/components/Navbar';
-import Hero from './assets/components/Hero';
-import LandingPage from '../src/assets/pages/LandingPage'
 import Footer from './assets/components/Footer';
+import LandingPage from './assets/pages/LandingPage';
+import DashboardLayout from './assets/layouts/DashboardLayout';
+// your dashboard container
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <main>
-        <LandingPage/>
-        {/* Other sections... */}
-      </main>
-      <Footer/>
-    </>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <LandingPage />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/dashboard/*" element={<DashboardLayout/>} />
+      </Routes>
+    </Router>
   );
 };
 

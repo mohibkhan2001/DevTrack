@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import dtHero from "../Images/dt_hero.jpg";
+import dtHero from "../Images/dt_hero.webp";
 import NavButtons from "./navButtons";
 
 const Hero = () => {
@@ -45,7 +45,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="hero h-screen w-full bg-cover bg-center relative zoom-animate"
+      className="hero h-screen w-full bg-cover bg-center relative zoom-animate "
       style={{ backgroundImage: `url(${dtHero})` }}
     >
       <div className="absolute inset-0 bg-black/50 pointer-events-none" />

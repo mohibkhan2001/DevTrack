@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const NavButtons = ({
   showStart = true,
@@ -6,12 +7,14 @@ const NavButtons = ({
   startClassName = '',
   learnClassName = '',
 }) => {
+
+  const navigate = useNavigate();
   return (
     <div className="flex gap-4">
       {showStart && (
         <button
-          className={`rounded-sm px-6 py-2 border transition duration-300 ease-in-out ${startClassName}`}
-          onClick={() => console.log('Get Started clicked')}
+          className={`rounded-sm px-6 py-2 border transition duration-300 ease-in-out cursor-pointer ${startClassName}`}
+          onClick={() => navigate('/dashboard')}
         >
           Get Started
         </button>

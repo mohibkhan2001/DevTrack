@@ -1,7 +1,7 @@
 import Aos from "aos";
 import React, { useEffect } from "react";
 import { FaPlus } from "react-icons/fa";
-import bgImage from '/src/assets/Images/dt_addNewGoalInfo.jpg'; // make sure the path is correct
+import bgImage from '/src/assets/Images/dt_addNewGoalInfo.webp'; // make sure the path is correct
 
 const AddGoalIntro = () => {
   useEffect(() => {

@@ -2,6 +2,7 @@
 @import "@glidejs/glide/dist/css/glide.core.min.css";
 
 
+
 @font-face {
   font-family: fira;
   src: url(./assets/Fonts/Fira_Code/static/FiraCode-Medium.ttf);
@@ -80,6 +81,4 @@
 .glide__slide:hover{
   opacity: 1;
 }
-body{
-  scroll-behavior: smooth;
-}
+

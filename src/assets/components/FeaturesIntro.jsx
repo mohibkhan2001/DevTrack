@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import Glide from "@glidejs/glide";
 import { FaCheckCircle } from "react-icons/fa";
-import featureImage from "../Images/dt_chart2.jpg";
-import featureImage2 from "../Images/dt_chart.jpg";
+import featureImage from "../Images/dt_chart2.webp";
+import featureImage2 from "../Images/dt_chart.webp";
 
 const FeaturesIntro = () => {
     const sliderRef = useRef(null);

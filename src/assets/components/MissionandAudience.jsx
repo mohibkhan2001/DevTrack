@@ -30,7 +30,7 @@ const MissionandAudience = () => {
             <div className="relative w-full max-w-5xl">
                 <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none rounded-lg" />
                 <img
-                    src="/src/assets/Images/dt_mission_audience.jpg"
+                    src="/src/assets/Images/dt_mission_audience.webp"
                     alt="Mission"
                     className="w-full h-auto relative z-0 object-cover rounded-lg"
                 />
