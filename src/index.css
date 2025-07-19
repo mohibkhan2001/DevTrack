@@ -82,3 +82,15 @@
   opacity: 1;
 }
 
+
+/* src/index.css (or similar global CSS file) */
+
+/* Add these lines to hide the scrollbar while keeping scroll functionality */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none;  /* For Firefox */
+}

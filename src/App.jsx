@@ -5,6 +5,7 @@ import Navbar from './assets/components/Navbar';
 import Footer from './assets/components/Footer';
 import LandingPage from './assets/pages/LandingPage';
 import DashboardLayout from './assets/layouts/DashboardLayout';
+import Dashboard from './assets/pages/Dashboard';
 // your dashboard container
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
             </>
           }
         />
-        <Route path="/dashboard/*" element={<DashboardLayout/>} />
+        <Route path="/dashboard/*" element={<Dashboard/>} />
       </Routes>
     </Router>
   );
